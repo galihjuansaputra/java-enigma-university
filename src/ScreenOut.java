@@ -25,7 +25,12 @@ public class ScreenOut {
             switch (inputMenu) {
                 case "1":
                     for (int i = 0; i < mahasiswaList.length; i++) {
-                        mahasiswaList[i] = AddMahasiswa.add();
+                        if (mahasiswaList[i] == null) {
+                            mahasiswaList[i] = AddMahasiswa.add();
+                            break;
+                        } else {
+                            System.out.println("Data sudah penuh!");
+                        }
                     }
                     break;
 

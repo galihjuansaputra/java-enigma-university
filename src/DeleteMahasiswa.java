@@ -4,9 +4,12 @@ public class DeleteMahasiswa {
         for (int i = mahasiswaList.length - 1; i >= 0; i--) {
             if (mahasiswaList[i] != null) {
                 mahasiswaList[i] = null;
+                System.out.println("Data berhasil dihapus!");
                 break;
             }
         }
-        System.out.println("Data berhasil dihapus!");
+        if (mahasiswaList[0] == null){
+            System.out.println("Data Kosong.");
+        }
     }
 }

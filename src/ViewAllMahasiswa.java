@@ -16,5 +16,9 @@ public class ViewAllMahasiswa {
                     "Umur :" + mahasiswaList[i].getAge() + "\n" +
                     "Jurusan : " + mahasiswaList[i].getMajor());
         }
+
+        if (mahasiswaList[0] == null){
+            System.out.println("Tidak ada data... \n");
+        }
     }
 }
