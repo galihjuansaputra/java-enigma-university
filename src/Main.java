@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        ScreenOut.mainMenu();
+        Mahasiswa[] mahasiswaList = new Mahasiswa[5];
+        ScreenOut.mainMenu(mahasiswaList);
     }
 }

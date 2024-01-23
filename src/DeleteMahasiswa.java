@@ -4,7 +4,7 @@ public class DeleteMahasiswa {
         for (int i = mahasiswaList.length - 1; i >= 0; i--) {
             if (mahasiswaList[i] != null) {
                 mahasiswaList[i] = null;
-                System.out.println("Data berhasil dihapus!");
+                System.out.println("Data terakhir berhasil dihapus!");
                 break;
             }
         }

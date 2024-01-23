@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class ScreenOut {
 
-    public static void mainMenu() {
-        Mahasiswa[] mahasiswaList = new Mahasiswa[5];
+    public static void mainMenu(Mahasiswa[] mahasiswaList) {
 
         Scanner scannerMenu = new Scanner(System.in);
 
@@ -28,7 +27,7 @@ public class ScreenOut {
                         if (mahasiswaList[i] == null) {
                             mahasiswaList[i] = AddMahasiswa.add();
                             break;
-                        } else {
+                        } else if (i == 4){
                             System.out.println("Data sudah penuh!");
                         }
                     }
@@ -45,7 +44,7 @@ public class ScreenOut {
                     break;
                 default:
                     System.out.println();
-                    System.out.println("[WARNING] Menu tidak tersedia");
+                    System.out.println("[WARNING] Menu tidak tersedia.");
                     System.out.println("Silahkan Coba Lagi...");
             }
         } while (isValid);
