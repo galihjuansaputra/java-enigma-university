@@ -1,14 +1,18 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ScreenOut {
 
     public static void mainMenu() {
-        Scanner scanner = new Scanner(System.in);
+        Mahasiswa[] mahasiswaList = new Mahasiswa[5];
+
+        Scanner scannerMenu = new Scanner(System.in);
 
         boolean isValid = true;
 
         do {
-            System.out.println("--------------------------------------\n" +
+            System.out.println(
+                    "--------------------------------------\n" +
                     "Main Menu\n" +
                     "--------------------------------------\n" +
                     "1. Add Mahasiswa\n" +
@@ -17,18 +21,23 @@ public class ScreenOut {
                     "4. Exit");
             System.out.print("Masukan menu yang dipilih : ");
 
-            int inputMenu = Integer.parseInt(scanner.nextLine());
+            String inputMenu = scannerMenu.nextLine();
             switch (inputMenu) {
-                case 1:
-                    AddMahasiswa.add();
+                case "1":
+                    for (int i = 0; i < mahasiswaList.length; i++) {
+                        System.out.println("Masukan data mahasiswa ke-"+(i+1));
+                        mahasiswaList[i] = AddMahasiswa.add();
+                        System.out.println("Data Berhasil dimasukan!");
+                    }
                     break;
-                case 2:
+
+                case "2":
                     DeleteMahasiswa.delete();
                     break;
-                case 3:
+                case "3":
                     ViewAllMahasiswa.viewAll();
                     break;
-                case 4:
+                case "4":
                     isValid = false;
                     break;
                 default:
