@@ -20,6 +20,8 @@ public class AddMahasiswa {
         System.out.print("Jurusan (maks 10 Karakter) :");
         data.setMajor(scanner.nextLine());
 
+        System.out.println("Data Berhasil dimasukan!");
+
         return data;
 
     }

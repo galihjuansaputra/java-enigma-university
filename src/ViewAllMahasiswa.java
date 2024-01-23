@@ -7,6 +7,9 @@ public class ViewAllMahasiswa {
                 "View All Mahasiswa\n" +
                 "--------------------------------------\n" );
         for (int i = 0; i < mahasiswaList.length; i++) {
+            if (mahasiswaList[i] == null){
+                break;
+            }
             System.out.println(
                     (i+1)+".\n" +
                     "Nama : " + mahasiswaList[i].getName() + "\n" +

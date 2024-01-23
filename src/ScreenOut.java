@@ -25,14 +25,12 @@ public class ScreenOut {
             switch (inputMenu) {
                 case "1":
                     for (int i = 0; i < mahasiswaList.length; i++) {
-                        System.out.println("Masukan data mahasiswa ke-"+(i+1));
                         mahasiswaList[i] = AddMahasiswa.add();
-                        System.out.println("Data Berhasil dimasukan!");
                     }
                     break;
 
                 case "2":
-                    DeleteMahasiswa.delete();
+                    DeleteMahasiswa.delete(mahasiswaList);
                     break;
                 case "3":
                     ViewAllMahasiswa.viewAll(mahasiswaList);
