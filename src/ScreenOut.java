@@ -35,7 +35,7 @@ public class ScreenOut {
                     DeleteMahasiswa.delete();
                     break;
                 case "3":
-                    ViewAllMahasiswa.viewAll();
+                    ViewAllMahasiswa.viewAll(mahasiswaList);
                     break;
                 case "4":
                     isValid = false;
